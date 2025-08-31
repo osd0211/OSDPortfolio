@@ -30,7 +30,6 @@
         headerToggle();
       }
     });
-
   });
 
   /**
@@ -95,7 +94,7 @@
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
+    typed_strings = typed_strings.split(',').map(s => s.trim()); // trim ekledik
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
@@ -164,7 +163,6 @@
         }
       }, false);
     });
-
   });
 
   /**
@@ -183,7 +181,6 @@
       }
     });
   }
-
   window.addEventListener("load", initSwiper);
 
   /**
@@ -223,17 +220,6 @@
       }
     })
   }
-  document.addEventListener("DOMContentLoaded", function() {
-  let typed = new Typed('.typed', {
-    strings: ["Engineer", "Developer", "Basketball Lover <i class='fa-solid fa-basketball'></i>"],
-    typeSpeed: 50,
-    backSpeed: 25,
-    loop: true,
-    smartBackspace: true,
-    contentType: 'html' // 🔑 burası önemli
-  });
-});
-
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 

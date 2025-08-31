@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Ömer Şerif DAĞLI</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
-  <link href="assets/img/development.png" rel="icon">
-  <link href="assets/img/development.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="assets/img/development.png" rel="icon" />
+  <link href="assets/img/development.png" rel="apple-touch-icon" />
 
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
 
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Icon sets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <!-- Main / Custom CSS -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
 </head>
 
 <body class="index-page">
-
+  <!-- ======= Sidebar Header ======= -->
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/cvfoto.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="assets/img/cvfoto.jpg" alt="Profile photo" class="img-fluid rounded-circle" />
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -46,11 +48,9 @@
     </a>
 
     <div class="social-links text-center">
-      <a href="https://www.linkedin.com/in/omerserifdagli" class="linkedin" target="_blank"><i
-          class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/osd0211" class="github" target="_blank"><i class="bi bi-github"></i></a>
-      <a href="https://www.instagram.com/osd0211" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-
+      <a href="https://www.linkedin.com/in/omerserifdagli" class="linkedin" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/osd0211" class="github" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="https://www.instagram.com/osd0211" class="instagram" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -58,43 +58,69 @@
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
-
   </header>
 
   <main class="main">
+    <!-- ======= HERO ======= -->
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/coding.jpeg" alt="" data-aos="fade-in" />
 
-    <div id="hero-placeholder"></div>
-    <div id="about-placeholder"></div>
-    <div id="resume-placeholder"></div>
-    <div id="contact-placeholder"></div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Ömer Şerif DAĞLI</h2>
+        <p>
+          I'm <span class="typed" data-typed-items="Engineer, Developer, Basketball Lover"></span>
+        </p>
+      </div>
+    </section>
 
+    <!-- ======= ABOUT ======= -->
+    <section id="about" class="section">
+      <div id="about-placeholder"></div>
+    </section>
+
+    <!-- ======= RESUME ======= -->
+    <section id="resume" class="section">
+      <div id="resume-placeholder"></div>
+    </section>
+
+    <!-- ======= CONTACT ======= -->
+    <section id="contact" class="section">
+      <div id="contact-placeholder"></div>
+    </section>
   </main>
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
 
-  <div id="preloader"></div>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true"></div>
+
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src="contact.js"></script>
 
+  <!-- Typed.js (önce bu) -->
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+
+  <!-- EmailJS (opsiyonel) -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <!-- Section Loader + Contact logic -->
+  <script src="assets/js/sections.js"></script>
+  <script src="assets/js/contact.js"></script>
+
+  <!-- Main Template JS (en sonda) -->
   <script src="assets/js/main.js"></script>
-
-  <script src="assets/js/include-html.js"></script>
-
 </body>
-
 </html>

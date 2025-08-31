@@ -1,212 +1,84 @@
-<!-- ============ About Section (drop-in) ============ -->
-<section id="about" class="about section">
-  <style>
-    /* Scoped styles — only affect #about */
-    #about {
-      --bg: #0f1117;
-      --card: rgba(255,255,255,.06);
-      --stroke: rgba(255,255,255,.12);
-      --text: #e6e8ef;
-      --muted: #a9afc3;
-      --accent: #5eead4; /* teal */
-      color: var(--text);
-      background: radial-gradient(80rem 80rem at 10% -20%, #1a1f2e 0%, transparent 60%),
-                  radial-gradient(60rem 60rem at 120% 20%, #182235 0%, transparent 60%);
-      padding: 80px 0;
-    }
-    #about .section-title h2{
-      color: var(--text);
-      font-weight: 800;
-      letter-spacing: .3px;
-    }
-    #about .lead {
-      color: var(--muted);
-      max-width: 900px;
-      margin-inline: auto;
-      font-size: 1.075rem;
-      line-height: 1.8;
-    }
-    #about .about-card{
-      border: 1px solid var(--stroke);
-      background: var(--card);
-      border-radius: 18px;
-      padding: 28px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
-    }
-    #about .avatar{
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--stroke);
-      transform: translateZ(0);
-    }
-    #about .avatar img{ width:100%; height:auto; display:block; }
-    #about .meta li{
-      display:flex; align-items:center; gap:10px;
-      padding:10px 0; border-bottom: 1px dashed var(--stroke);
-    }
-    #about .meta li:last-child{ border-bottom: 0; }
-    #about .meta strong{ width:110px; color:#cbd5e1; font-weight:600; }
-    #about .chip{
-      display:inline-flex; align-items:center; gap:8px;
-      border:1px solid var(--stroke); background:rgba(255,255,255,.04);
-      padding:8px 12px; border-radius:999px; font-size:.95rem;
-    }
-    #about .flag-duo{ display:flex; gap:8px; }
-    #about .subtle{ color: var(--muted); }
-    #about .list-clean{ padding-left: 1rem; margin: 0; }
-    #about .list-clean li{ margin:.35rem 0; }
-    #about .timeline{
-      position:relative; padding-left: 22px; margin:0;
-    }
-    #about .timeline::before{
-      content:""; position:absolute; left:8px; top:0; bottom:0;
-      width:2px; background: var(--stroke);
-    }
-    #about .timeline li{
-      list-style:none; position:relative; margin: 0 0 14px 0;
-    }
-    #about .timeline li::before{
-      content:""; position:absolute; left:-2px; top:.35rem;
-      width:10px; height:10px; border-radius:50%;
-      background: var(--accent); box-shadow:0 0 0 4px rgba(94,234,212,.15);
-    }
-    #about .skills{
-      display:flex; flex-wrap:wrap; gap:14px;
-    }
-    #about .skill{
-      display:flex; flex-direction:column; align-items:center; gap:6px;
-      width:88px; padding:14px 8px; border-radius:14px;
-      border:1px solid var(--stroke); background:rgba(255,255,255,.04);
-      transition: transform .15s ease;
-      font-size:48px;
-    }
-    #about .skill small{ font-size:12px; color: var(--muted); }
-    #about .skill:hover{ transform: translateY(-3px); }
-    @media (max-width: 991.98px){
-      #about { padding: 56px 0; }
-    }
-  </style>
+<!-- feature/about.html -->
+<div class="container" data-aos="fade-up">
+ <div class="section-title text-start mb-5">
+  <h2>About</h2>
+  <p class="text-muted lead mb-0">
+    I design and build clean, pragmatic solutions—curiosity-first, performance-minded, team-oriented.
+  </p>
+</div>
 
-  <!-- Section Title -->
-  <div class="container section-title text-center" data-aos="fade-up">
-    <h2>About</h2>
-    <p class="lead mt-3">
-      I’m <strong>Ömer Şerif DAĞLI</strong>, a Computer Engineering student who enjoys solving problems and learning new technologies.
-      I focus on clear, functional solutions and keep sharpening my software skills. Curiosity pushes me to explore new ideas—both in code and in life.
-      Off the keyboard, basketball keeps me disciplined, motivated, and team-oriented.
-    </p>
-  </div>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-4 justify-content-center">
-      <div class="col-lg-4">
-        <div class="avatar about-card">
-          <img src="assets/img/cvfoto.jpg" alt="Portrait of Ömer Şerif DAĞLI">
-        </div>
-      </div>
+  <div class="row g-4">
+    <!-- Tek sütun: tüm genişlik -->
+    <div class="col-12">
+      <div class="glass neon glass-hover">
+        <div class="glass-inner">
 
-      <div class="col-lg-8">
-        <div class="about-card">
-          <div class="row g-4">
-            <!-- Left meta -->
-            <div class="col-md-6">
-              <ul class="meta">
-                <li><i class="bi bi-cake"></i> <strong>Birthday</strong> <span>02 November 2001</span></li>
-                <li><i class="bi bi-telephone"></i> <strong>Phone</strong> <span>+90 5** *** ** **</span></li>
-                <li><i class="bi bi-geo-alt"></i> <strong>City</strong> <span>Gaziantep &amp; İstanbul / Türkiye</span></li>
-              </ul>
-            </div>
-            <!-- Right meta -->
-            <div class="col-md-6">
-              <ul class="meta">
-                <li><i class="bi bi-mortarboard"></i> <strong>Degree</strong> <span>Bachelor</span></li>
-                <li><i class="bi bi-envelope"></i> <strong>Email</strong> <span>dagliomerserif@gmail.com</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Education -->
-          <h3 class="mt-4">Education</h3>
-          <ul class="timeline">
-            <li>
-              <div><strong>2019</strong> — Gaziantep Anadolu High School, Gaziantep</div>
-            </li>
-            <li>
-              <div><strong>2020</strong> — Computer Engineering, Maltepe University, İstanbul</div>
-            </li>
-            <li>
-              <div><strong>2025</strong> — Erasmus, Politehnica University of Bucharest, Romania</div>
-            </li>
-          </ul>
-
-          <!-- Languages -->
-          <h3 class="mt-4">Languages</h3>
-          <div class="d-flex flex-wrap gap-3">
-            <span class="chip">
-              <span class="fi fi-tr"></span>
-              <span>Turkish</span>
-              <span class="subtle">— Native</span>
-            </span>
-            <span class="chip">
-              <span class="flag-duo">
-                <span class="fi fi-gb"></span>
-                <span class="fi fi-us"></span>
-              </span>
-              <span>English</span>
-              <span class="subtle">— B2 (Upper-Intermediate)</span>
-            </span>
-          </div>
-
-          <!-- Skills -->
-          <h3 class="mt-4">Technical Skills</h3>
-          <div class="skills">
-            <div class="skill" title="C">
-              <i class="devicon-c-plain colored"></i>
-              <small>C</small>
-            </div>
-            <div class="skill" title="C++">
-              <i class="devicon-cplusplus-plain colored"></i>
-              <small>C++</small>
-            </div>
-            <div class="skill" title="Java">
-              <i class="devicon-java-plain colored"></i>
-              <small>Java</small>
-            </div>
-            <div class="skill" title="PHP">
-              <i class="devicon-php-plain colored"></i>
-              <small>PHP</small>
-            </div>
-            <div class="skill" title="MySQL">
-              <i class="devicon-mysql-plain colored"></i>
-              <small>MySQL</small>
-            </div>
-            <div class="skill" title="HTML5">
-              <i class="devicon-html5-plain colored"></i>
-              <small>HTML</small>
-            </div>
-            <div class="skill" title="CSS3">
-              <i class="devicon-css3-plain colored"></i>
-              <small>CSS</small>
-            </div>
-            <div class="skill" title="Bootstrap">
-              <i class="devicon-bootstrap-plain colored"></i>
-              <small>Bootstrap</small>
-            </div>
-            <div class="skill" title="JavaScript">
-              <i class="devicon-javascript-plain colored"></i>
-              <small>JavaScript</small>
-            </div>
-          </div>
-
-          <!-- Activities -->
-          <h3 class="mt-4">Activities</h3>
-          <ul class="list-clean">
-            <li>Member of Maltepe University Basketball Team (2021 – Present)</li>
-          </ul>
-        </div>
-      </div>
+    <!-- Profile -->
+<div class="profile-box d-flex align-items-center mb-4" 
+     style="gap:20px; align-items:center;">
+  
+  <img src="assets/img/cvfoto.jpg" alt="Profile"
+       style="width:100px; height:100px; border-radius:50%; object-fit:cover;
+              border:3px solid #444; margin-right:20px;" />
+  
+  <div>
+    <h3 style="margin-bottom:8px; font-size:1.5rem;">Ömer Şerif DAĞLI</h3>
+    <div class="chips">
+      <span class="chip" 
+            style="margin:4px 6px 0 0; padding:6px 12px; font-size:0.9rem;">
+            <i class="bi bi-lightning-charge-fill"></i> Problem Solver
+      </span>
+      <span class="chip" 
+            style="margin:4px 6px 0 0; padding:6px 12px; font-size:0.9rem;">
+            <i class="bi bi-cpu"></i> Computer Engineering
+      </span>
+      <span class="chip" 
+            style="margin:4px 6px 0 0; padding:6px 12px; font-size:0.9rem;">
+            <i class="fa-solid fa-basketball"></i> Basketball Lover
+      </span>
     </div>
   </div>
-</section>
-<!-- ============ /About Section ============ -->
+</div>
+
+
+          <!-- About text -->
+          <p class="mb-4">
+            I’m a Computer Engineering student passionate about learning and creating. I value readable code,
+            simple architectures, and steady iteration. Outside code, basketball helps me stay disciplined and collaborative.
+          </p>
+
+          <!-- Skills -->
+          <div class="glass glass-hover mb-4">
+            <div class="glass-inner">
+              <h5 class="mb-3">Technical Skills</h5>
+              <div class="icon-grid">
+                <span class="icon-col"><i class="devicon-c-plain colored"></i><small>C</small></span>
+                <span class="icon-col"><i class="devicon-cplusplus-plain colored"></i><small>C++</small></span>
+                <span class="icon-col"><i class="devicon-java-plain colored"></i><small>Java</small></span>
+                <span class="icon-col"><i class="devicon-php-plain colored"></i><small>PHP</small></span>
+                <span class="icon-col"><i class="devicon-mysql-plain colored"></i><small>MySQL</small></span>
+                <span class="icon-col"><i class="devicon-html5-plain colored"></i><small>HTML</small></span>
+                <span class="icon-col"><i class="devicon-css3-plain colored"></i><small>CSS</small></span>
+                <span class="icon-col"><i class="devicon-bootstrap-plain colored"></i><small>Bootstrap</small></span>
+                <span class="icon-col"><i class="devicon-javascript-plain colored"></i><small>JS</small></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="glass glass-hover mb-4">
+            <div class="glass-inner">
+              <h5 class="mb-3">Languages</h5>
+              <div class="chips">
+                <span class="chip"><span class="fi fi-tr"></span> Turkish — Native</span>
+                <span class="chip"><span class="fi fi-gb"></span><span class="fi fi-us"></span> English — B2</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /glass-inner -->
+      </div><!-- /glass -->
+    </div><!-- /col-12 -->
+  </div><!-- /row -->
+</div>
