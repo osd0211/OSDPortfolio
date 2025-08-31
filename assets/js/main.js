@@ -223,6 +223,17 @@
       }
     })
   }
+  document.addEventListener("DOMContentLoaded", function() {
+  let typed = new Typed('.typed', {
+    strings: ["Engineer", "Developer", "Basketball Lover <i class='fa-solid fa-basketball'></i>"],
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: true,
+    smartBackspace: true,
+    contentType: 'html' // 🔑 burası önemli
+  });
+});
+
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
