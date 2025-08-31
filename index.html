@@ -6,8 +6,8 @@
   <title>Ömer Şerif DAĞLI</title>
 
   <!-- Favicons -->
-  <link href="assets/img/faviconv3.png" rel="icon" />
-  <link href="assets/img/faviconv3.png" rel="apple-touch-icon" />
+  <link href="assets/img/logo.png" rel="icon" />
+  <link href="assets/img/logo.png" rel="apple-touch-icon" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -67,12 +67,9 @@
     <!-- ======= HERO ======= -->
     <section id="hero" class="hero section dark-background">
       <img src="assets/img/coding.jpeg" alt="" data-aos="fade-in" />
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Ömer Şerif DAĞLI</h2>
-        <p>
-          I'm <span class="typed" data-typed-items="Engineer, Developer, Basketball Lover"></span>
-        </p>
+        <p>I'm <span class="typed" data-typed-items="Engineer, Developer, Basketball Lover"></span></p>
       </div>
     </section>
 
@@ -110,17 +107,19 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Typed.js (önce bu) -->
+  <!-- Typed.js -->
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
 
-  <!-- EmailJS (opsiyonel) -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-  <!-- Section Loader + Contact logic -->
+  <!-- Sections loader (partial'ları içeri alıyor) -->
   <script src="assets/js/sections.js"></script>
+
+  <!-- EmailJS v4 (TEK script; v3'ü kaldırdık) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Contact logic (MutationObserver ile form gelince bağlanıyor) -->
   <script src="assets/js/contact.js"></script>
 
-  <!-- Main Template JS (en sonda) -->
+  <!-- Main Template JS -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
