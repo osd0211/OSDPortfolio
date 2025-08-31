@@ -9,10 +9,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
   <link href="assets/css/custom.css" rel="stylesheet"/>
 
-  <!-- EmailJS SDK (v4) – MUST load before your script -->
+  <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-  <!-- Your JS (defer so DOM is ready) -->
+  <!-- Contact JS -->
   <script src="assets/js/contact.js" defer></script>
 </head>
 <body>
@@ -22,8 +22,8 @@
     <h2>Contact</h2>
   </div>
 
-  <div class="row g-4">
-    <!-- Quick Info -->
+  <!-- Quick Info -->
+  <div class="row g-4 mb-4">
     <div class="col-lg-5">
       <div class="glass glass-hover">
         <div class="glass-inner">
@@ -56,10 +56,14 @@
   </div><!-- /row -->
 
   <!-- Contact Form -->
-  <div class="row mt-4">
+  <div class="row">
     <div class="col-12">
       <div class="glass neon glass-hover">
         <div class="glass-inner">
+
+          <!-- Alert alanı -->
+          <div id="form-alerts" class="mb-3" aria-live="polite" aria-atomic="true"></div>
+
           <form id="contact-form" class="needs-validation" novalidate>
             <div class="row g-3">
               
@@ -94,12 +98,14 @@
               <!-- Submit -->
               <div class="col-12 d-flex align-items-center gap-3">
                 <button type="submit" class="btn btn-pill btn-primary" id="send-btn">
-                  <i class="bi bi-send"></i> Send
+                  <span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+                  <span class="btn-text"><i class="bi bi-send"></i> Send</span>
                 </button>
                 <div id="contact-status" class="small text-muted" role="status" aria-live="polite"></div>
               </div>
             </div>
           </form>
+
         </div>
       </div>
     </div>
