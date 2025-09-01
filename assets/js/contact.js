@@ -46,10 +46,10 @@
     if (!window.emailjs) {
       console.error("EmailJS SDK yok (v4).");
       showAlert("danger", "Mesaj servisi yüklenemedi. Sayfayı yenileyin.");
-      return true; // denemeyi kes
+      return true;
     }
     try {
-      emailjs.init({ publicKey: "p1sOB_wohSe5JrFGs" }); // v4
+      emailjs.init({ publicKey: "p1sOB_wohSe5JrFGs" }); // kendi publicKey’in
     } catch (e) {
       console.error("EmailJS init hatası:", e);
       showAlert("danger", "Mesaj servisi başlatılamadı.");
@@ -68,13 +68,13 @@
         return;
       }
 
+      // ŞABLON değişkenleri ile birebir uyumlu parametreler
       const params = {
-        user_name: form.user_name.value.trim(),
-        user_email: form.user_email.value.trim(),
-        subject: form.subject.value.trim(),
-        message: form.message.value.trim(),
-        to_email: "dagliomerserif@gmail.com",         // template "To" = {{to_email}} ise
-        reply_to: form.user_email.value.trim()        // Reply-To için
+        name:    form.user_name.value.trim(),   // {{name}}
+        email:   form.user_email.value.trim(),  // {{email}}
+        title:   form.subject.value.trim(),     // {{title}}
+        message: form.message.value.trim(),     // {{message}}
+        time:    new Date().toLocaleString()    // {{time}}
       };
 
       setButtonLoading(true);
