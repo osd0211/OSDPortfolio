@@ -42,14 +42,14 @@
     const sendBtn = document.querySelector("#send-btn");
     if (!form || !sendBtn) return false;
 
-    // EmailJS SDK
+    // EmailJS v4 SDK
     if (!window.emailjs) {
-      console.error("EmailJS SDK yok (v4).");
+      console.error("EmailJS SDK bulunamadı.");
       showAlert("danger", "Mesaj servisi yüklenemedi. Sayfayı yenileyin.");
       return true;
     }
     try {
-      emailjs.init({ publicKey: "p1sOB_wohSe5JrFGs" }); // kendi publicKey’in
+      emailjs.init({ publicKey: "p1sOB_wohSe5JrFGs" }); // kendi public key'in
     } catch (e) {
       console.error("EmailJS init hatası:", e);
       showAlert("danger", "Mesaj servisi başlatılamadı.");
@@ -68,13 +68,17 @@
         return;
       }
 
-      // ŞABLON değişkenleri ile birebir uyumlu parametreler
+      // !!! ŞABLONLA BİREBİR AYNI İSİMLER !!!
+      // Template değişkenlerin: {{name}}, {{email}}, {{title}}, {{message}}, {{time}}
+      const userEmail = form.user_email.value.trim();
       const params = {
-        name:    form.user_name.value.trim(),   // {{name}}
-        email:   form.user_email.value.trim(),  // {{email}}
-        title:   form.subject.value.trim(),     // {{title}}
-        message: form.message.value.trim(),     // {{message}}
-        time:    new Date().toLocaleString()    // {{time}}
+        name:    form.user_name.value.trim(), // -> {{name}}
+        email:   userEmail,                   // -> {{email}}
+        title:   form.subject.value.trim(),   // -> {{title}} (Subject'te kullanılıyor)
+        message: form.message.value.trim(),   // -> {{message}}
+        time:    new Date().toLocaleString(), // -> {{time}}
+        // Bazı kurulumlarda Reply-To için ayrıca lazım olabiliyor:
+        reply_to: userEmail
       };
 
       setButtonLoading(true);
@@ -114,9 +118,8 @@
     return true;
   }
 
-  // 1) Sayfa açılır açılmaz dener
+  // Sayfa yüklenince bağlan, yoksa DOM değişimini izle
   if (!bindIfReady()) {
-    // 2) Hâlâ yoksa DOM değişimlerini izle (partial yüklenince bağlan)
     const obs = new MutationObserver(() => {
       if (bindIfReady()) obs.disconnect();
     });
